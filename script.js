@@ -1,14 +1,12 @@
-// Auto year script
-const year = new Date().getFullYear();
-document.getElementById("year").innerText = "Current Year: " + year;
-document.getElementById("yearFooter").innerText = year;
+// year
+document.getElementById("year").innerText = new Date().getFullYear();
 
-// Smooth scroll
-document.querySelectorAll("nav a").forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-        });
-    });
+// particles
+tsParticles.load("particles-js", {
+  particles: {
+    number: { value: 50 },
+    size: { value: 3 },
+    move: { enable: true },
+    links: { enable: true }
+  }
 });
